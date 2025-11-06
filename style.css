@@ -1,0 +1,271 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(90deg, #ff6fb2, #6fffb0);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.6em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+.admin-btn {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+/* === Hero === */
+.hero {
+  background: linear-gradient(135deg, #ff6fb2 30%, #6fffb0 90%);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-text h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: white;
+  color: #ff6fb2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #6fffb0;
+  color: white;
+}
+
+/* === Produk Section === */
+.produk-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.produk-section h2 {
+  color: #ff6fb2;
+  margin-bottom: 30px;
+}
+
+.produk-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.produk-card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+}
+
+.produk-card h3 {
+  color: #333;
+}
+
+.produk-card p {
+  color: #666;
+  margin: 10px 0;
+}
+
+.produk-card button {
+  background: #ff6fb2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.produk-card button:hover {
+  background: #6fffb0;
+}
+
+/* === Order Section === */
+.order-section {
+  background: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.order-section h2 {
+  color: #6fffb0;
+  margin-bottom: 15px;
+}
+
+ol {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* === Footer === */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+}
+
+/* === Login Page === */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff6fb2, #6fffb0);
+  color: white;
+}
+
+.login-page h2 {
+  margin-bottom: 20px;
+}
+
+.login-page input {
+  width: 250px;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-danger {
+  background: #ff6fb2;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background: #6fffb0;
+}
+
+.error-text {
+  color: yellow;
+  margin-top: 10px;
+}
+
+/* === Admin Dashboard === */
+.dashboard {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6fb2, #6fffb0);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.stats {
+  margin-top: 30px;
+}
+
+.manage-products {
+  margin-top: 40px;
+}
+
+.form-produk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-produk input {
+  flex: 1;
+  min-width: 150px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#produk-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#produk-table th, #produk-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+#produk-table th {
+  background: #ff6fb2;
+  color: white;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .form-produk {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  }
