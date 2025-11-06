@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - DODON GAMERS</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="login-page" class="login-page">
+    <h2>Login Admin</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn" class="btn-primary">Masuk</button>
+    <p id="login-error" class="error-text"></p>
+  </div>
+
+  <div id="admin-dashboard" class="dashboard hidden">
+    <header class="admin-header">
+      <h1>Panel Admin - DODON GAMERS</h1>
+      <button id="logout-btn" class="btn-danger">Logout</button>
+    </header>
+
+    <section class="stats">
+      <h2>Statistik Penjualan</h2>
+      <canvas id="salesChart"></canvas>
+    </section>
+
+    <section class="manage-products">
+      <h2>Kelola Produk</h2>
+      <div class="form-produk">
+        <input type="text" id="nama-produk" placeholder="Nama Produk" />
+        <input type="number" id="harga-produk" placeholder="Harga (Rp)" />
+        <input type="text" id="kategori-produk" placeholder="Kategori (ML, FF, Joki...)" />
+        <button id="add-product" class="btn-primary">Tambah Produk</button>
+      </div>
+
+      <table id="produk-table">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Kategori</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+        </html>
